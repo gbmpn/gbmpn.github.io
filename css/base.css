@@ -128,8 +128,23 @@ main {
 	height: 100vh;
 }
 
+.frame {
+	width:100vw;
+	height:100vh;
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+}
+
 .top-left {position: absolute; top : 25px; left:25px; font-size: 1rem;}
-.top-right {position: absolute; top: 25px; right: 25px; pointer-events: fill;} .bottom-left {position: absolute; bottom: 25px; left: 25px;}.bottom-right {position: absolute; bottom: 25px; right: 25px;}
+
+.frame .top-right {position: absolute; top: 25px; right: 25px; left: auto; color: black !important;}
+
+.bottom-left {position: absolute; bottom: 25px; left: 25px;}
+
+.bottom-right {position: absolute; bottom: 25px; right: 25px;}
 body #cdawrap {
     justify-self: start;
 }
