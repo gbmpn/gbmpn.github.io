@@ -126,6 +126,13 @@ main {
 	grid-template-areas: 'main';
 	width: 100%;
 	height: 100vh;
+	overflow-y: scroll;
+	-ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none; 
+}
+
+main::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .frame {
@@ -136,15 +143,18 @@ main {
 	left:0;
 	right:0;
 	bottom:0;
+	pointer-events: none;
+	z-index: 1000;
 }
 
 .top-left {position: absolute; top : 25px; left:25px; font-size: 1rem;}
 
-.frame .top-right {position: absolute; top: 25px; right: 25px; left: auto; color: black !important;}
+.frame .top-right {position: absolute; top: 25px; right: 25px; left: auto; pointer-events: all;}
 
 .bottom-left {position: absolute; bottom: 25px; left: 25px;}
 
 .bottom-right {position: absolute; bottom: 25px; right: 25px;}
+
 body #cdawrap {
     justify-self: start;
 }
@@ -153,11 +163,11 @@ body #cdawrap {
 	pointer-events: auto;
 }
 
-.frame a:not(.frame__title-back) {
+/* .frame a:not(.frame__title-back) {
 	white-space: nowrap;
 	overflow: hidden;
 	position: relative;
-}
+} */
 
 .frame a:not(.frame__title-back)::before {
 	content: '';
@@ -205,12 +215,20 @@ body #cdawrap {
 }
 
 .menu {
+	padding-top: 150px;
 	position: relative;
 	grid-area: main;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	max-height: 100vh;
+	margin-bottom: 450px;
+}
+
+.lorem {
+	max-width: 700px;
+	margin: -350px auto 0;
+	z-index: -1;
 }
 
 .menu--hidden {
@@ -515,5 +533,39 @@ body #cdawrap {
 	}
 	body #cdawrap {
 	    justify-self: end;
+	}
+}
+
+
+@media screen and (max-width: 640px) {
+
+	.menu {
+		padding-top: 80px;
+		margin-left: -31px;
+	}
+
+	.frame .top-right {
+		position: absolute;
+        top: auto;
+        left: 15px;
+        rightt: auto !important;
+        pointer-events: all;
+        right: auto;
+        bottom: 40px;
+		background-color: black;
+		padding: 5px 15px;
+		border: solid 1px white;
+		border-radius: 20px;
+	}
+	
+	.lorem {
+		max-width: 380px;
+		margin: -420px auto 0;
+		z-index: -1;
+	}
+	.frame .top-right::before,
+	.bottom-left,
+	.bottom-right {
+		display: none;
 	}
 }
