@@ -128,23 +128,8 @@ main {
 	height: 100vh;
 }
 
-.frame {
-	grid-area: main;
-	z-index: 1000;
-	position: relative;
-	width: 100%;
-	padding: 1.5rem;
-	display: grid;
-	grid-template-columns: 100%;
-	grid-template-areas: 'title' 'prev' 'sponsor';
-	grid-gap: 0.5rem;
-	justify-items: start;
-	align-self: start;
-	justify-self: start;
-	pointer-events: none;
-	align-items: center;
-}
-
+.top-left {position: absolute; top : 25px; left:25px; font-size: 1rem;}
+.top-right {position: absolute; top: 25px; right: 25px; pointer-events: fill;} .bottom-left {position: absolute; bottom: 25px; left: 25px;}.bottom-right {position: absolute; bottom: 25px; right: 25px;}
 body #cdawrap {
     justify-self: start;
 }
