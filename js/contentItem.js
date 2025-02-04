@@ -15,6 +15,7 @@ export class ContentItem {
     constructor(DOM_el) {
         this.DOM.el = DOM_el;
         this.DOM.backCtrl = this.DOM.el.querySelector('.content__back');
+        this.DOM.launchCtrl = this.DOM.el.querySelector('.content__front');
         this.DOM.title = this.DOM.el.querySelector('.content__title');
         this.DOM.description = this.DOM.el.querySelector('.content__desc');
         this.DOM.thumbgrid = this.DOM.el.querySelector('.content__images > .thumbgrid');

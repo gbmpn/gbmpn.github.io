@@ -202,6 +202,14 @@ for (const menuItem of menuItems) {
             stagger: 0.025,
             xPercent: 0
         }, 'content')
+        .fromTo([menuItem.contentItem.DOM.description, menuItem.contentItem.DOM.launchCtrl], {
+            opacity: 0,
+            yPercent: 100
+        }, {
+            opacity: 1,
+            yPercent: 0,
+            delay: 0.1
+        }, 'content')
         .fromTo([menuItem.contentItem.DOM.description, menuItem.contentItem.DOM.backCtrl], {
             opacity: 0,
             yPercent: 100
@@ -209,6 +217,7 @@ for (const menuItem of menuItems) {
             opacity: 1,
             yPercent: 0
         }, 'content')
+        
         .fromTo([menuItem.contentItem.DOM.nextThumb, menuItem.contentItem.DOM.prevThumb], {
             scale: 0.9,
             xPercent: pos => pos ? -30 : 30,
@@ -251,6 +260,10 @@ for (const menuItem of menuItems) {
             opacity: 0,
         }, 'content')
         .to([menuItem.contentItem.DOM.description, menuItem.contentItem.DOM.backCtrl], {
+            opacity: 0,
+            yPercent: -100
+        }, 'content')
+        .to([menuItem.contentItem.DOM.description, menuItem.contentItem.DOM.launchCtrl], {
             opacity: 0,
             yPercent: -100
         }, 'content')
