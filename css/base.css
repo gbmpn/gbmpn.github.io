@@ -485,6 +485,20 @@ body #cdawrap {
 	border-radius: 2rem;
 }
 
+.content__front {
+	position: absolute;
+	justify-self: end;
+	grid-column: 2;
+	right: 50%;
+	min-width: 120px;
+	color: #fff;
+	text-transform: uppercase;
+	padding: 0.15rem 0.85rem 0.25rem;
+	border: 1px solid rgba(255,255,255,0.3);
+	border-radius: 2rem;
+	margin-right: 25px;
+}
+
 @media screen and (min-width: 53em) {
 	.frame {
 		position: fixed;
