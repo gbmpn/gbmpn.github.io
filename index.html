@@ -272,5 +272,13 @@
 		<script src="js/splitting.min.js"></script>
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script type="module" src="js/index.js"></script>
+		<script>
+			const navEl =  document.querySelectorAll('.menu__item');
+			navEl.forEach((el, i) => {
+				el.addEventListener('click', () => {
+					document.querySelector('main').scrollTo(0, 0);
+				})
+			})
+		</script>
 	</body>
 </html>

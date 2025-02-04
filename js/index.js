@@ -110,7 +110,10 @@ for (const menuItem of menuItems) {
 
     // Click event: show content area
     menuItem.DOM.el.addEventListener('click', () => {
+        
+        
         if ( isAnimating ) return;
+  
         
         isAnimating = true;
         mode = 'content';
@@ -220,6 +223,7 @@ for (const menuItem of menuItems) {
 
     // Back to menu
     menuItem.contentItem.DOM.backCtrl.addEventListener('click', () => {
+      
         if ( isAnimating ) return;
         
         isAnimating = true;
