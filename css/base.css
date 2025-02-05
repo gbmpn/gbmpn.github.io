@@ -611,6 +611,10 @@ body #cdawrap {
 		max-width: 90%;
 		margin: -420px auto 0;
 		z-index: -1;
+		transition: 0.3s ease;
+	}
+	.lorem.hidden {
+		opacity: 0;
 	}
 	.frame .bottom-left::before{
 		content: "";

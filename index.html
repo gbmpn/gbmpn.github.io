@@ -21,7 +21,7 @@
 				<circle cx="131" cy="131" r="125" stroke="white" stroke-width="12"/>
 			</svg>
 			<div class="frame">
-				<h1 class="top-left">GB/M — Design & Creative Dev.</h1>
+				<h1 class="top-left">GB/M — Design & Dev.</h1>
 				<a class="bottom-left" href="mailto:gbmp.me@gmail.com">reach out ♡</a>
 				<!-- <span class="bottom-left">Montpellier, Occitamie, France</span> -->
 				<span class="bottom-right">Copyright © 2025</span>
@@ -277,10 +277,18 @@
 		<script src="js/imagesloaded.pkgd.min.js"></script>
 		<script type="module" src="js/index.js"></script>
 		<script>
+			const lorem = document.querySelector('.lorem');
 			const navEl =  document.querySelectorAll('.menu__item');
+			const backBtn =  document.querySelectorAll('.content__back');
 			navEl.forEach((el, i) => {
 				el.addEventListener('click', () => {
 					document.querySelector('main').scrollTo(0, 0);
+					lorem.classList.add('hidden')
+				})
+			})
+			backBtn.forEach((el, i) => {
+				el.addEventListener('click', () => {
+					lorem.classList.remove('hidden')
 				})
 			})
 		</script>
